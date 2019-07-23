@@ -1,15 +1,14 @@
 import os
 import json
 import tweepy
+from dotenv import load_dotenv
 
-twitterDir = os.path.dirname(os.path.abspath(__file__))
-with open(f'{twitterDir}/credentials.json') as credentialsFile:
-  credentials = json.load(credentialsFile)
+load_dotenv()
 
 
 def authenticate():
-  auth = tweepy.OAuthHandler(credentials['CONSUMER_API_KEY'], credentials['CONSUMER_API_SECRET'])
-  auth.set_access_token(credentials['ACCESS_TOKEN'], credentials['ACCESS_TOKEN_SECRET'])
+  auth = tweepy.OAuthHandler(os.getenv('TWITTER_CONSUMER_API_KEY'), os.getenv('TWITTER_CONSUMER_API_SECRET'))
+  auth.set_access_token(os.getenv('TWITTER_ACCESS_TOKEN'), os.getenv('TWITTER_ACCESS_TOKEN_SECRET'))
   return tweepy.API(auth)
 
 
