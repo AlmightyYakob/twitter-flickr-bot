@@ -13,5 +13,4 @@ def getRandomPhoto():
   photos = photoInfo['photos']['photo']
   photo = photos[randint(0, len(photos) - 1)]
 
-  url = json.loads(flickr.photos.getInfo(photo_id=photo['id']))['photo']['urls']['url'][0]['_content']
-  return url
+  return json.loads(flickr.photos.getInfo(photo_id=photo['id']))
