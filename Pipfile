@@ -3,7 +3,20 @@ url = 'https://pypi.python.org/simple'
 verify_ssl = true
 name = 'pypi'
 
+[requires]
+python_version = '3.7'
+
+[pipenv]
+allow_prereleases = true
+
+[dev-packages]
+flake8 = "*"
+black = "*"
+flake8-black = "*"
+
 [packages]
-flickrapi
-tweepy
-python-dotenv
+flickrapi = "*"
+tweepy = "*"
+python-dotenv = "*"
+apscheduler = "*"
+sqlitedict = "*"
