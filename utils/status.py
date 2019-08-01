@@ -1,8 +1,8 @@
-import json
+# import json
 
 
 def createStatusFromPhoto(photo):
-    print(json.dumps(photo, indent=4))
+    # print(json.dumps(photo, indent=4))
     url = photo["urls"]["url"][0]["_content"]
     hashtags = list(map(lambda x: f"#{x['_content']}", photo["tags"]["tag"]))
     title = photo["title"]["_content"]
