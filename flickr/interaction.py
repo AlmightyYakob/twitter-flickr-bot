@@ -54,7 +54,7 @@ def getNextPhoto():
     lastPhotoTimestamp = db[LAST_FLICKR_TIMESTAMP]
     photoInfo = json.loads(
         flickr.people.getPhotos(
-            user_id=FLICKR_USERNAME, min_upload_date=lastPhotoTimestamp + 1
+            user_id=FLICKR_USERNAME, min_upload_date=int(lastPhotoTimestamp) + 1
         )
     )
     photos = photoInfo["photos"]["photo"]

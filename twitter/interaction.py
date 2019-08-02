@@ -23,4 +23,4 @@ def reverseGeocode(lat, lng, accuracy):
 
 def postTweet(status, meta={}):
     api = authenticate()
-    api.update_status(status, place_id=meta["place_id"])
+    api.update_status(status, **meta)

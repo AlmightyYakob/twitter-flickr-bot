@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  flitter:
+    build: .
+    ports:
+     - "5000:80"
