@@ -1,4 +1,5 @@
-# Another Bot for Sam
+# Flitter
+## This is a bot that will (one-way) link a flickr and twitter account, by tweeting all photos posted to the flickr account.
 
 ## Installation
 Requirements:
